@@ -8,10 +8,13 @@ type Service interface {
 	GetById(string) (*AccessToken, *errors.RestErr)
 }
 type service struct {
+	repository Repository
 }
 
-func NewService() Service {
-	return &service{}
+func NewService(repo Repository) Service {
+	return &service{
+		repository: repo,
+	}
 }
 func (s *service) GetById(string) (*AccessToken, *errors.RestErr) {
 	return nil, nil
