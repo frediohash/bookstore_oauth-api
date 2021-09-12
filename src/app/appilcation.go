@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/frediohash/bookstore_oauth-api/domain/access_token"
-	"github.com/frediohash/bookstore_oauth-api/repository/db"
+	"github.com/frediohash/bookstore_oauth-api/src/domain/access_token"
+	"github.com/frediohash/bookstore_oauth-api/src/repository/db"
 )
 
 func StartApplication() {
