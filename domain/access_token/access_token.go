@@ -2,8 +2,6 @@ package access_token
 
 import (
 	"time"
-
-	"github.com/frediohash/bookstore_users-api/utils/errors"
 )
 
 // while accessed by other devices, we need client-id to make expiration of sessions
@@ -19,10 +17,6 @@ type AccessToken struct {
 	UserId      int64  `json:"user_id"`
 	ClientId    int64  `json:"client_id"`
 	Expires     int64  `json:"expires"`
-}
-
-type Repository interface {
-	GetById(string) (*AccessToken, *errors.RestErr)
 }
 
 func GetNewAccessToken() AccessToken {
