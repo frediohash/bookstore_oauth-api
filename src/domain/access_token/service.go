@@ -1,7 +1,7 @@
 package access_token
 
 import (
-	"github.com/frediohash/bookstore_oauth-api/src/domain/access_token"
+	"github.com/frediohash/bookstore_oauth-api/src/repository/db"
 	"github.com/frediohash/bookstore_oauth-api/src/utils/errors"
 )
 
