@@ -1,5 +1,10 @@
 package access_token
 
+import (
+	"github.com/frediohash/bookstore_oauth-api/src/domain/access_token"
+	"github.com/frediohash/bookstore_oauth-api/src/utils/errors"
+)
+
 type Service interface {
 	GetById(string) (*AccessToken, *errors.RestErr)
 }
