@@ -1,22 +1,20 @@
 package access_token
 
 import (
+	"github.com/frediohash/bookstore_oauth-api/repository/db"
 	"github.com/frediohash/bookstore_users-api/utils/errors"
 )
 
-type Repository interface {
-	GetById(string) (*AccessToken, *errors.RestErr)
-}
 type Service interface {
 	GetById(string) (*AccessToken, *errors.RestErr)
 }
 type service struct {
-	repository Repository
+	repository db.DbRepository
 }
 
-func NewService(repo Repository) Service {
+func NewService(repository db.DbRepository) Service {
 	return &service{
-		repository: repo,
+		repository: repository,
 	}
 }
 func (s *service) GetById(id string) (*AccessToken, *errors.RestErr) {
