@@ -4,6 +4,9 @@ import (
 	"github.com/frediohash/bookstore_users-api/utils/errors"
 )
 
+type Repository interface {
+	GetById(string) (*AccessToken, *errors.RestErr)
+}
 type Service interface {
 	GetById(string) (*AccessToken, *errors.RestErr)
 }
