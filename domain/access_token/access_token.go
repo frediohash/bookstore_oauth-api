@@ -1,6 +1,8 @@
 package access_token
 
-import "time"
+import (
+	"time"
+)
 
 // while accessed by other devices, we need client-id to make expiration of sessions
 // Web Frontend - Client-Id : 123
