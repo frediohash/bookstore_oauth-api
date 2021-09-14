@@ -11,6 +11,7 @@ type Service interface {
 type service struct {
 	repository db.DbRepository
 }
+
 func NewService(repository db.DbRepository) Service {
 	return &service{
 		repository: repository,

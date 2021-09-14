@@ -1,6 +1,6 @@
 package app
 
-import(
+import (
 	"github.com/frediohash/bookstore_oauth-api/domain/access_token"
 	"github.com/frediohash/bookstore_oauth-api/repository/db"
 )
